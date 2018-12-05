@@ -1,0 +1,98 @@
+<div class="container_fluid" style="width:25%">
+   
+<div class="row custom-row">
+    <div class= "col-sm-12 custom-container jumbotron" style="padding:12%;">
+         
+      <form class="form-horizontal" [formGroup]="signupForm" (ngSubmit)="onFormSubmit()">
+          <fieldset>
+            <legend>SignUp</legend>
+            <div class="row">
+              <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input type="text" 
+                  id="inputEmail" class="form-control"
+                  placeholder="Email" formControlName = "email">
+                  <div *ngIf="signupForm.controls.email.invalid && signupForm.controls.email.touched">
+                     
+                      <div *ngIf="email.invalid && email.touched"
+                          class="col-sm-12 text-danger">
+                  
+                          <div *ngIf = "email.errors?.required">
+                              Email field can't be blank
+                          </div>
+                  
+                          <div *ngIf = "email.errors?.pattern">
+                              The email id doesn't seem right
+                          </div>
+                  
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div formGroupName = "password">
+              <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password"
+                  id="inputPassword" class="form-control"
+                  placeholder="Password" formControlName = "pwd">
+                  
+                  <div *ngIf="(password.invalid && password.touched)"
+                      class="col-sm-12 text-danger">
+                  
+                      Password needs to be more than 8 characters
+                  </div>
+              </div>
+           
+            
+              <!-- <div class="form-group">
+                <label for="confirmPassword" >Confirm Password</label>
+                <input type="password"
+                  id="confirmPassword" class="form-control" formControlName = "confirmPwd"
+                  placeholder="Password">
+              </div> -->
+            </div>
+            </div> 
+            <!-- <div class="row">
+              <div class="form-group">
+                <label for="select">Gender</label>
+                  <select id="select" class="form-control" formControlName = "gender">
+                      <option [value]="0" selected>Please Select</option>
+                      <option *ngFor = "let g of genderList"
+                                   [value] = "g"> {{g}} 
+                     </option>
+                  </select>
+                  <div *ngIf="(gender.invalid && gender.touched)"
+                  class="col-sm-12 text-danger">
+              
+                  Select the any one of the options..
+              </div>
+              </div>
+            </div>  -->
+            
+            <!-- <div class="row"> 
+              <div class="form-group checkbox">
+                <label>
+                  <input type="checkbox" > Confirm that you've read the Terms and 
+                  Conditions
+                </label>
+                <div *ngIf="(terms.invalid && terms.touched)"
+                    class="col-sm-3 text-danger">
+                    
+                    Please accept the Terms and conditions first.
+                  </div>
+                </div>
+              </div> -->
+            
+            <div class="row"> 
+              <div class="form-group signup_btn">
+                  <button type="reset" class="btn btn-default">Cancel</button>
+                  <button type="submit" [disabled] = "!signupForm.valid" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+      </form>
+
+    </div>
+  </div>
+</div>

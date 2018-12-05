@@ -1,0 +1,60 @@
+
+.personal_list{float:left;color:green;font-weight:bold;font-size:20px;}
+/* .item_count{display: inline-block;
+    width: 48px;
+    height: 47px;
+    background: #ffbdbd;
+    border-radius: 25px;
+    padding: 12px;text-align: center;} */
+.thead-inverse{background: #292b2c;color: #fff; }
+.thead-inverse th{padding:10px}
+/* .navbar,.table_detailicon{margin-top:25px} */
+.black-title{background: #655b5b;
+    border: 0;
+    width: 10%;
+    padding: 8px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;float:right;margin:15px 0 15px 0;}
+.red-title{background: #f11a18b3;
+    border: 0;
+    width: 100%;
+    padding: 5px 0 5px 0;
+    border-radius: 5px;}
+.green-title{background: #00800073;
+    border: 0;
+    width: 100%;
+    padding: 5px 0 5px 0;border-radius: 5px;}
+.clear{
+    width: 7%;
+    float: right;
+}
+  
+.modal-header{background: #000000;
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+}
+.record_add{
+    background: #fff;
+    padding: 25px;
+    border-radius: 5px;
+                           
+}
+.bg_lightredpopup{
+    width: 40%;
+    font-size: 19px;
+    margin: 0 auto;
+}
+.form-group {
+    height:60px;
+}
+thead>tr>th {
+    cursor: pointer;
+}
+.modal_bodybold{
+    font-size:16px;
+    color:red;
+    font-weight: bold;
+}

@@ -1,0 +1,42 @@
+<div class="modal fade" #modal>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal" [formGroup]="form">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <header class="font-12 bold">{{ Modaleditbtn }}</header>
+                </div>
+                <div class="modal-body">
+                       
+                    <div class="clear">
+                        <div class="row">
+                       
+                          <div class="col-md-6">
+                              <label for="firstname" class="control-label required">Firstname</label>
+                              <input type="text" id="firstname" class="form-control" placeholder="First Name" formControlName="firstname" name="firstname" [(ngModel)]="firstname">
+                         </div>
+                         <div class="col-md-6">
+                              <label for="lastname" class="control-label required">Lastname</label>
+                              <input type="text" id="lastname" class="form-control" placeholder="Last Name" formControlName="lastname" name="lastname" [(ngModel)]="lastname">
+                          </div>
+                          <div class="col-md-6">
+                              <label for="phoneno" class="control-label required">Phoneno</label>
+                              <input type="text" id="phoneno" class="form-control" placeholder="Phone no" formControlName="phoneno" name="phoneno" [(ngModel)]="phoneno">
+                          </div>
+                          <div class="col-md-6">
+                              <label for="emailid" class="control-label required">Emailid</label>
+                              <input type="text" id="emailid" class="form-control" placeholder="Email ID" formControlName="emailid" name="emailid" [(ngModel)]="emailid">
+                          </div>
+
+                        </div>
+                     </div> 
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div style="text-align:center">
+ 
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Welcome to {{ title }}!</a>
+    </div>
+    <ul class="nav navbar-nav">
+
+        <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active" >User Management</a></li>
+       
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a routerLink="/signup" routerLinkActive="active"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+  </nav>
+
+  <div class="jumbotron">
+
+  </div>
+ 
+ </div>
+<router-outlet></router-outlet>

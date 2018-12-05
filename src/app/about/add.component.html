@@ -1,0 +1,59 @@
+<form class="form-horizontal" [formGroup]="form" #loginForm="ngForm">
+        <div class="clear record_add">
+           <div class="clear record_add">
+           <div class="row">
+              <div class="form-group col-md-2" [ngClass]="displayFieldCss('firstname')">
+               <div class="">
+                 <label for="firstname" class="control-label required">Firstname</label>
+                 <input type="text" id="firstname" class="form-control" placeholder="First Name" formControlName="firstname" name="firstname" [(ngModel)]="firstname">
+                 
+                 <app-field-errordisplay [displayError]="isFieldValid('firstname')" errorMsg="Please enter your firstname">
+                 </app-field-errordisplay>
+               </div>
+               
+             </div>
+           
+             <div class="form-group col-md-2" [ngClass]="displayFieldCss('lastname')">
+                 <div class="">
+                 <label for="lastname" class="control-label required">Lastname</label>
+                 <input type="text" id="lastname" class="form-control" placeholder="Last Name" formControlName="lastname" name="lastname" [(ngModel)]="lastname">
+                 
+                 <app-field-errordisplay [displayError]="isFieldValid('lastname')" errorMsg="Please enter your lastname">
+                 </app-field-errordisplay>
+               </div>
+             </div>
+
+             <div class="form-group col-md-2" [ngClass]="displayFieldCss('phoneno')">
+                 <div class="">
+                 <label for="phoneno" class="control-label required">phoneno</label>
+                 <input type="text" id="phoneno" class="form-control" placeholder="Phone no" formControlName="phoneno" name="phoneno" [(ngModel)]="phoneno">
+                 
+                 <app-field-errordisplay [displayError]="isFieldValid('phoneno')" errorMsg="Please enter your phoneno">
+                 </app-field-errordisplay>
+           
+               </div>
+             </div>
+
+             <div class="form-group col-md-2" [ngClass]="displayFieldCss('emailid')">
+                 <div class="">
+                 <label for="emailid" class="control-label required">emailid</label>
+                 <input type="text" id="emailid" class="form-control" placeholder="Email ID" formControlName="emailid" name="emailid" [(ngModel)]="emailid">
+                 
+                 <app-field-errordisplay [displayError]="isFieldValid('emailid')" errorMsg="Please enter your emailid">
+                 </app-field-errordisplay>
+           
+               </div>
+             </div>
+
+             <div class="col-md-1">
+                 <label for="submit"></label>
+                 <button [class]="edit_new" class="edit_new" [disabled]="!loginForm.form.valid" (click)="sendValues(firstname,lastname,phoneno,emailid)"> {{ inputaddbtn }}</button>
+             </div>
+             <div class="col-md-1">
+                   <label for="submit"></label>
+                   <button [class]="inputadd_new" class="delete_new" (click)="addbtn_close()"> Close </button>
+               </div>
+           </div>
+        </div>
+       </div>
+       </form>

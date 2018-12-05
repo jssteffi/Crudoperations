@@ -1,0 +1,98 @@
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+   
+    <form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()">
+   
+        <div class="record_add">
+                <h2 class="detials_user"><span class="glyphicon glyphicon-user"></span> <span style="padding-left:10px">Add the user details :</span></h2>
+                 <div class="row">
+                <div class="form-group " [ngClass]="displayFieldCss('id')">
+                        <label for="id" class="control-label required col-md-2">id</label>
+                        <div class="col-md-10">
+                              <input type="text" id="id" class="form-control" placeholder="id" formControlName="id" name="id" OnlyNumber="true" [(ngModel)]='id'>
+                              <app-field-errordisplay [displayError]="isFieldValid('id')" errorMsg="Please enter your id">
+                               </app-field-errordisplay>
+                          </div>
+                    </div>
+            
+           <div class="form-group " [ngClass]="displayFieldCss('FirstName')">
+              <label for="FirstName" class="control-label required col-md-2">FirstName</label>
+              <div class="col-md-10">
+                    <input type="text" id="FirstName" class="form-control" placeholder="First Name" formControlName="FirstName" name="FirstName" [(ngModel)]="FirstName" maxlength="50"> 
+                    <app-field-errordisplay [displayError]="isFieldValid('FirstName')" errorMsg="Please enter your FirstName">
+                     </app-field-errordisplay>
+                </div>
+          </div>
+          <div class="form-group" [ngClass]="displayFieldCss('LastName')">
+             <label for="LastName" class="control-label required col-md-2">LastName</label>
+             <div class="col-md-10"> 
+                   <input type="text" id="LastName" class="form-control" placeholder="Last Name" formControlName="LastName" name="LastName" [(ngModel)]="LastName" maxlength="50" >
+                    <app-field-errordisplay [displayError]="isFieldValid('LastName')" errorMsg="Please enter your LastName">
+                    </app-field-errordisplay>
+            </div>
+          </div>
+
+          <div class="form-group" [ngClass]="displayFieldCss('PhoneNo')">
+            
+              <label for="PhoneNo" class="control-label required col-md-2">PhoneNo</label>
+              
+              <div class="col-md-10">
+                    <input type="text" id="PhoneNo" class="form-control" placeholder="Phone no" formControlName="PhoneNo" name="PhoneNo" [(ngModel)]="PhoneNo" OnlyNumber="true" maxlength="10"   >
+                    <app-field-errordisplay [displayError]="isFieldValid('PhoneNo')" errorMsg="Please enter your PhoneNo">
+                     </app-field-errordisplay>
+              </div>
+          </div>
+
+          <div class="form-group" [ngClass]="displayFieldCss('Email')">
+              
+              <label for="Email" class="control-label required  col-md-2">Email</label>
+              <div class="col-md-10">
+              <input type="text" id="Email" class="form-control" placeholder="Email ID" formControlName="Email" name="Email" [(ngModel)]="Email">
+              
+              <app-field-errordisplay [displayError]="isFieldValid('Email')" errorMsg="Please enter your Email">
+              </app-field-errordisplay>
+        
+            </div>
+          </div>
+
+        <div class="form-group">
+        <div class="row" style="float:right;width:85%">
+          <div class="col-md-1">
+              <label for="submit"></label>
+              <button type="submit" class="btn btn-success btn-md" > Save </button>
+          </div>
+          <div class="col-md-1">
+                <label for="submit"></label>
+                <a class="btn btn-danger btn-md" routerLink="/about/"> Cancel </a>
+           </div>
+          </div>
+         </div>
+        </div>
+     </div>
+    </form>
+
+    <div class="modal fade" #modal>
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <form>
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <header class="font-12 bold">Add response</header>
+                  </div>
+                  <div class="modal-body">
+                     <p *ngIf="isValid" [ngStyle]="appStyleGreen"> Data saved Succesfully..</p>
+                     <p *ngIf="!isValid" [ngStyle]="applygreenstyle==true?appStyleGreen:appStyleBlue"> Already this ID was in the page. Please check the Dashboard..</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary" routerLink="/about/" data-dismiss="modal">ok</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>

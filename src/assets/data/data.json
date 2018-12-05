@@ -1,0 +1,45 @@
+[
+        {
+          "firstname" : "Mohan",
+          "lastname": " dass",
+          "phoneno ": "123456",
+          "emailid" : "mohan@gmail.com"
+       },
+        {
+          "firstname" : "Mohan",
+          "lastname": " dass",
+          "phoneno" : "123456",
+          "emailid" : "mohan@gmail.com"
+      },
+      {
+        "firstname" : "dass",
+        "lastname": " mohan",
+        "phoneno" : "9677635255",
+       "emailid" : "dass@gmail.com"
+      },
+      {
+        "firstname" : "ms",
+        "lastname": " Xbox",
+        "phoneno" : "96776352355",
+        "emailid" : "ms@gmail.com"
+      },
+      {
+        "firstname" : "Steffi",
+        "lastname": " Xbox One, PS4, PC",
+        "phoneno" : "96776352355",
+        "emailid ": "mohandass@gmail.com"
+      },
+      {
+        "firstname" : "Ms",
+        "lastname" : " Xbox One, PS4, PC",
+        "phoneno" : "96776352355",
+        "emailid" : "mohandass@gmail.com"
+      },
+      {
+        "firstname" : "Mohandass",
+        "lastname": " D",
+        "phoneno" : "8264895632",
+        "emailid" : "mohandassms@gmail.com"
+      }
+      
+    ]
